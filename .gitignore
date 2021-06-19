@@ -4,3 +4,5 @@
 5-http/node_modules/
 6-express/node_modules/
 7-cognito/node_modules/
+8-signup/node_modules/
+9-signupWithTypescript/node_modules/
