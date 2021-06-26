@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { workerData } = require('worker_threads');
+const _ = require('lodash');
 
 console.log('Iniciando')
 
@@ -27,6 +27,9 @@ fs.readFile('./data/store.json', 'utf8', (err, data) => {
         console.log('Lectura correcta');
         let readProducts = JSON.parse(data);
         console.log(JSON.stringify(readProducts));
+        let resultado = _.filter(readProducts, {id: 2});
+        console.log("Elemento buscado");
+        console.log(JSON.stringify(resultado));
     }
 })
 
