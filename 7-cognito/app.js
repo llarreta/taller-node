@@ -25,8 +25,9 @@ function RegisterUser(){
     attributeList.push(new AmazonCognitoIdentity.CognitoUserAttribute({Name:"email",Value:"sampleEmail@gmail.com"}));
     attributeList.push(new AmazonCognitoIdentity.CognitoUserAttribute({Name:"phone_number",Value:"+5412614324321"}));
     //attributeList.push(new AmazonCognitoIdentity.CognitoUserAttribute({Name:"custom:scope",Value:"admin"}));
-    userPool.lo
-    userPool.signUp('taller21@gmail.com', 'TallerPassword#123', attributeList, null, function(err, result){
+    
+    userPool.signUp('taller21@gmail.com', 'TallerPassword#123', attributeList, null, 
+    function(err, result){
         if (err) {
             console.log(err);
             return;

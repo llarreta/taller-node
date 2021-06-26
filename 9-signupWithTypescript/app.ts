@@ -40,7 +40,6 @@ app.post(url, (req, res) => {
     attributeList.push(new AmazonCognitoIdentity.CognitoUserAttribute({Name:"address",Value:"CMB"}));
     attributeList.push(new AmazonCognitoIdentity.CognitoUserAttribute({Name:"phone_number",Value:"+5412614324321"}));
     */
-
     userPool.signUp(request.username, request.password, attributeList, [], function(err: any, result: any){
         if (err) {
             console.log(err);
